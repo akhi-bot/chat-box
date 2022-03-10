@@ -1,0 +1,55 @@
+.input_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.input_form {
+  flex: 1;
+  display: flex;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.input_form > form {
+  flex: 1;
+}
+.input_form > form > input {
+  width: 100%;
+  height: 1.9rem;
+  font-size: 1.2rem;
+  border-radius: 30px 0 0 30px;
+  padding: 10px;
+  border: none;
+}
+
+.gif {
+  position: relative;
+}
+
+.gif_dropdown.MuiSvgIcon-root {
+  position: absolute;
+  top: 25px;
+  left: 8px;
+  color: rgba(0, 0, 0, 0.548) !important;
+}
+.input_form .MuiButtonBase-root {
+  background-color: white;
+}
+
+.input_form > form > input:focus {
+  outline: none;
+}
+
+.input_form > form > .submit_btn {
+  display: none;
+}
+.input_container .MuiSvgIcon-root {
+  padding: 5px;
+  color: #3486a2;
+}
+.input_container .MuiSvgIcon-root:hover {
+  padding: 5px;
+  color: #3da1c2;
+}
