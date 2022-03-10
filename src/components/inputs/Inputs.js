@@ -1,4 +1,4 @@
-import { useState, useContext, useRef } from "react";
+import { useState, useContext, useEffect, useRef } from "react";
 import "./input.css";
 import { IconButton } from "@mui/material";
 import ListContext from "../../store/list-context";
@@ -17,7 +17,9 @@ const Inputs = () => {
     }
     inputRef.current.value = "";
   };
-
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
   const searchGif = (e) => {
     e.preventDefault();
     setToggleGifContainer((state) => !state);

@@ -33,11 +33,19 @@
 .list_img {
   width: 60%;
   object-fit: contain;
+  object-position: top left;
+  max-height: 200px;
   border-radius: 5px;
   transition: 0.3s width ease-in;
 }
 .list_img:hover {
   width: 63%;
+}
+
+.list_container > p {
+  color: rgb(183, 213, 218);
+  font-size: 2rem;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

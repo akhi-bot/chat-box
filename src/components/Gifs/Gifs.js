@@ -1,6 +1,6 @@
 import "./gif.css";
 import { SearchRounded } from "@mui/icons-material";
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import ListContext from "../../store/list-context";
 
 const api = {
@@ -32,6 +32,10 @@ const Gifs = (props) => {
     fetchData();
     inputRef.current.value = "";
   };
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const addIntoList = (item) => (e) => {
     console.log(showGif);

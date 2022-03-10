@@ -8,10 +8,7 @@ const ListContext = createContext({
 });
 
 export const ListProvider = (props) => {
-  const [list, setList] = useState([
-    { type: "text", value: "akhilesh" },
-    { type: "text", value: "rawat" },
-  ]);
+  const [list, setList] = useState([]);
   console.log(list);
   const addListItemHandler = (item) => {
     setList([...list, item]);
