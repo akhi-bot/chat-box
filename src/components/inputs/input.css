@@ -8,7 +8,7 @@
 .input_form {
   flex: 1;
   display: flex;
-  background-color: white;
+  background-color: #fdf8f5;
   border-radius: 30px;
 }
 
@@ -18,10 +18,15 @@
 .input_form > form > input {
   width: 100%;
   height: 1.9rem;
+  color: #4f4846;
   font-size: 1.2rem;
+  background-color: #fdf8f5;
   border-radius: 30px 0 0 30px;
   padding: 10px;
   border: none;
+}
+.input_form > form > input::placeholder {
+  color: #4f4846;
 }
 
 .gif {
@@ -32,10 +37,10 @@
   position: absolute;
   top: 25px;
   left: 8px;
-  color: rgba(0, 0, 0, 0.548) !important;
+  color: #ddaf94 !important;
 }
 .input_form .MuiButtonBase-root {
-  background-color: white;
+  background-color: #fdf8f5;
 }
 
 .input_form > form > input:focus {
@@ -47,9 +52,9 @@
 }
 .input_container .MuiSvgIcon-root {
   padding: 5px;
-  color: #3486a2;
+  color: #266150;
 }
 .input_container .MuiSvgIcon-root:hover {
   padding: 5px;
-  color: #3da1c2;
+  color: #1f493d;
 }

@@ -6,7 +6,8 @@
   margin-top: 2rem;
   row-gap: 1rem;
   padding: 1rem;
-  background-color: #1d3557;
+  background-color: #ebcebf;
+  box-shadow: 0 0 10px #4f4846;
   border-radius: 15px 15px 0 0;
   box-sizing: border-box;
 }
@@ -17,14 +18,15 @@
 .list_item {
   list-style: none;
   width: max-content;
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 70%;
   border-radius: 5px;
   padding: 5px;
   word-break: break-all;
+  font-weight: 500;
   transition: 0.5s all ease-in-out;
-  box-shadow: 0 0 5px rgb(110, 110, 212);
-  color: white;
-  background-color: rgba(139, 128, 128, 0.897);
+  color: #f8f8f5;
+  background-color: #266150;
 }
 .list_item:hover {
   padding-right: 2rem;
@@ -43,7 +45,9 @@
 }
 
 .list_container > p {
-  color: rgb(183, 213, 218);
+  color: #f8f8f5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
   font-size: 2rem;
   text-align: center;
 }
