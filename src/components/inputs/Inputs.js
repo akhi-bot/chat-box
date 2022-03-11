@@ -14,7 +14,6 @@ const Inputs = () => {
   );
 
   const scrollToBottom = () => {
-    console.log(scrollPosition);
     setScrollPosition(window.scrollY + window.outerHeight);
   };
 
@@ -31,7 +30,6 @@ const Inputs = () => {
   };
 
   useEffect(() => {
-    console.log("changed");
     window.scrollTo(0, scrollPosition);
   }, [scrollPosition]);
 
