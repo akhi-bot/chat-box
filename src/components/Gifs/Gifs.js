@@ -11,7 +11,7 @@ const api = {
 
 const Gifs = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { showGif } = props;
+  const { showGif, scrollToBottom } = props;
   const inputRef = useRef();
   const listContext = useContext(ListContext);
   const [gifs, setGifs] = useState([]);
@@ -38,9 +38,9 @@ const Gifs = (props) => {
   }, []);
 
   const addIntoList = (item) => (e) => {
-    console.log(showGif);
     listContext.addNewItem({ type: "url", value: item });
     showGif(e);
+    scrollToBottom();
   };
 
   return (

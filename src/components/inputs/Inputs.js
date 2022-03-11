@@ -9,21 +9,41 @@ const Inputs = () => {
   const inputRef = useRef();
   const [toggleGifContainer, setToggleGifContainer] = useState(false);
   const listContext = useContext(ListContext);
+  const [scrollPosition, setScrollPosition] = useState(
+    window.scrollY + window.innerHeight
+  );
+
+  const scrollToBottom = () => {
+    console.log(scrollPosition);
+    setScrollPosition(window.scrollY + window.outerHeight);
+  };
+
   const sendMessage = (e) => {
     e.preventDefault();
     const input = inputRef.current.value;
     if (input !== "") {
       listContext.addNewItem({ type: "text", value: input });
     }
+    console.log(window.scrollY, window.outerHeight);
     inputRef.current.value = "";
+    window.scrollBy(0, 10);
+    scrollToBottom();
   };
+
+  useEffect(() => {
+    console.log("changed");
+    window.scrollTo(0, scrollPosition);
+  }, [scrollPosition]);
+
   useEffect(() => {
     inputRef.current.focus();
   }, []);
+
   const searchGif = (e) => {
     e.preventDefault();
     setToggleGifContainer((state) => !state);
   };
+
   return (
     <div className="input_container">
       <div className="input_form">
@@ -45,7 +65,7 @@ const Inputs = () => {
             <>
               {" "}
               <ArrowDropUpTwoTone className="gif_dropdown" />
-              <Gifs number={1} showGif={searchGif} />
+              <Gifs showGif={searchGif} scrollToBottom={scrollToBottom} />
             </>
           )}
         </div>
